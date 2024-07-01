@@ -24,7 +24,7 @@ class System:
         self.x = self.x * 0.9 + u + np.random.randn() * self.noise
         return self.x
 
-def run_pid(kp, ki, kd, noise, target=2., dt=0.1, init_state=1., integral=0, prev_error=0):
+def run_pid(kp, ki, kd, noise, target=2., dt=0.1, init_state=1., integral=0., prev_error=0.):
     pid = PID(kp, ki, kd, I=integral)
     system = System(init_state, noise=noise)
     error = target - system.x

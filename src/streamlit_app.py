@@ -76,4 +76,4 @@ while True:
     errors = errors[-100:]
 
     # Pause for a short duration
-    time.sleep(0.001)
+    time.sleep(0.01)
