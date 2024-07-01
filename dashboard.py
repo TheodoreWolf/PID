@@ -5,8 +5,7 @@ import numpy as np
 import pid_utils
 import time
 
-
-# Using Streamlit's experimental singleton to run the function once
+# Comibine with first running decorator
 @st.cache_data(persist=True)
 def run_on_startup():
     return [], []
@@ -28,8 +27,9 @@ system_target = st.sidebar.slider("System target", 0., 10., 2.)
 noise = st.sidebar.slider("System noise", 0., 1., 0.01)
 
 plot_placeholder = st.empty()
+# need to cache current states and targets somehow
 while True:
-    
+    # need to update state properly
     state, controls = pid_utils.run_pid(kp, ki, kd, noise, target=system_target, dt=control_freq)
     targets.append(system_target)
     states.extend(state)
