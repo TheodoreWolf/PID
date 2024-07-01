@@ -7,8 +7,7 @@ import streamlit as st
 
 import pid_utils
 
-st.title("Introduction to PID Control")
-st.write("Simple dashboard to demonstrate PID control")
+st.title("Simulator")
 
 st.sidebar.title("Settings")
 kp = st.sidebar.slider(
