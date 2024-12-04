@@ -19,7 +19,7 @@ kp = st.sidebar.slider(
 )
 ki = st.sidebar.slider("Ki", 0.0, 1.0, 0.2, 0.01)
 kd = st.sidebar.slider("Kd", 0.0, 1.0, 0.01, 0.01)
-control_freq = st.sidebar.slider("Control frequency (1/s)", 0.01, 1.0, 0.1)
+control_freq = st.sidebar.slider("Control period (s)", 0.01, 1.0, 0.1)
 system_target = st.sidebar.slider("System target", 0.0, 10.0, 2.0)
 noise = st.sidebar.slider("System noise", 0.0, 1.0, 0.1)
 init_state = st.sidebar.slider("Initial state", 0.0, 10.0, 5.0)
